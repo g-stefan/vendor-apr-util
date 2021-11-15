@@ -38,8 +38,13 @@ if not exist apr-util\ mkdir apr-util
 
 rem --- required
 set VENDOR=apr-1.7.0-%XYO_PLATFORM%-dev
-set WEB_LINK=https://github.com/g-stefan/vendor-apr/releases/download/v1.7.0/apr-1.7.0-%XYO_PLATFORM%-dev.7z
+if not exist ..\..\vendor-apr\release\%VENDOR%.7z goto apr_getFromGitHub
+copy /Y /B ..\..\vendor-apr\release\%VENDOR%.7z %VENDOR%.7z
+goto apr_process
+:apr_getFromGitHub
+set WEB_LINK=https://github.com/g-stefan/vendor-apr/releases/download/v1.7.0/%VENDOR%.7z
 curl --insecure --location %WEB_LINK% --output %VENDOR%.7z
+:apr_process
 7z x -aoa -o. %VENDOR%.7z
 xcopy  /Y /S /E "%VENDOR%\*" "apr-util\"
 rmdir /Q /S %VENDOR%
