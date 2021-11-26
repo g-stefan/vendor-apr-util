@@ -6,7 +6,7 @@ rem Created by Grigore Stefan <g_stefan@yahoo.com>
 set ACTION=%1
 if "%1" == "" set ACTION=make
 
-echo -^> %ACTION% vendor-apr-util
+echo - %BUILD_PROJECT% ^> %1
 
 goto cmdXDefined
 :cmdX
@@ -38,6 +38,10 @@ if not exist apr-util\ mkdir apr-util
 
 rem --- required
 set VENDOR=apr-1.7.0-%XYO_PLATFORM%-dev
+if not exist %XYO_PATH_RELEASE%\%VENDOR%.7z goto apr_getFromLocal
+copy /Y /B %XYO_PATH_RELEASE%\%VENDOR%.7z %VENDOR%.7z
+goto apr_process
+:apr_getFromLocal
 if not exist ..\..\vendor-apr\release\%VENDOR%.7z goto apr_getFromGitHub
 copy /Y /B ..\..\vendor-apr\release\%VENDOR%.7z %VENDOR%.7z
 goto apr_process
@@ -66,22 +70,3 @@ SET CMD_CONFIG=%CMD_CONFIG% -DCMAKE_PREFIX_PATH=%XYO_PATH_REPOSITORY%
 if not exist %WORKSPACE_PATH_BUILD%\build.configured.flag %CMD_CONFIG%
 if errorlevel 1 goto makeError
 if not exist %WORKSPACE_PATH_BUILD%\build.configured.flag echo configured > %WORKSPACE_PATH_BUILD%\build.configured.flag
-
-ninja
-if errorlevel 1 goto makeError
-ninja install
-if errorlevel 1 goto makeError
-ninja clean
-if errorlevel 1 goto makeError
-
-goto buildDone
-
-:makeError
-popd
-echo "Error: make"
-exit 1
-
-:buildDone
-popd
-echo done > %WORKSPACE_PATH_BUILD%\build.done.flag
-

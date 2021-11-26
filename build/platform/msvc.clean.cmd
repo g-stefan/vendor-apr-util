@@ -3,6 +3,7 @@ rem Public domain
 rem http://unlicense.org/
 rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo -^> clean-release vendor-apr-util
+echo - %BUILD_PROJECT% ^> clean
 
-if exist release\ rmdir /Q /S release
+if exist output\ rmdir /Q /S output
+if exist temp\ rmdir /Q /S temp
