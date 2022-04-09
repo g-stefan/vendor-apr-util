@@ -27,6 +27,6 @@ set WEB_LINK=http://mirror.evowise.com/apache/apr/apr-util-1.6.1.tar.gz
 if not exist %VENDOR%.tar.gz curl --insecure --location %WEB_LINK% --output %VENDOR%.tar.gz
 7z x %VENDOR%.tar.gz -so | 7z x -aoa -si -ttar -o.
 del /F /Q %VENDOR%.tar.gz
-7zr a -mx9 -mmt4 -r- -sse -w. -y -t7z %VENDOR%.7z %VENDOR%
+7z a -mx9 -mmt4 -r- -sse -w. -y -t7z %VENDOR%.7z %VENDOR%
 rmdir /Q /S %VENDOR%
 popd
