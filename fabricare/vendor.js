@@ -17,7 +17,6 @@ if (Shell.fileExists("archive/" + Project.vendor + ".7z")) {
 	Shell.removeFile("archive/" + Project.vendor + ".7z");
 };
 
-Console.writeLn("curl --insecure --location https://github.com/g-stefan/vendor-" + Project.name + "/releases/download/v" + Project.version + "/" + Project.vendor + ".7z --output archive/" + Project.vendor + ".7z");
 exitIf(Shell.system("curl --insecure --location https://github.com/g-stefan/vendor-" + Project.name + "/releases/download/v" + Project.version + "/" + Project.vendor + ".7z --output archive/" + Project.vendor + ".7z"));
 if (Shell.getFileSize("archive/" + Project.vendor + ".7z") > 16) {
 	return;
