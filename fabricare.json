@@ -2,7 +2,7 @@
 	"project": {
 		"name" : "apr-util",
 		"type" : "xyo-cpp",
-		"SPDX-License-Identifier": "LicenseRef-",
+		"SPDX-License-Identifier": "Apache-2.0",
 		"sourceLink" : "https://apr.apache.org/download.cgi",
 		"version" : "1.6.1"
 	}
