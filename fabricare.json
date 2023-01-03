@@ -1,13 +1,17 @@
 {
-	"project": {
-		"name" : "apr-util",
+	"solution": {
+		"name" : "vendor-apr-util",
 		"type" : "xyo-cpp",
-		"SPDX-License-Identifier": "Apache-2.0",
-		"sourceLink" : "https://apr.apache.org/download.cgi",
-		"version" : "1.6.1",
-		"hasRelease" : true,
-		"noVersion" : true,
-		"githubRelease" : true,
-		"githubRepository" : "vendor-apr-util"
+		"projects": [
+			{
+				"name" : "apr-util",
+				"SPDX-License-Identifier": "Apache-2.0",
+				"sourceLink" : "https://apr.apache.org/download.cgi",
+				"version" : "1.6.1",
+				"noVersion" : true
+			}
+		],
+		"releaseName" : "apr-util",
+		"hasGithub" : true
 	}
 }
