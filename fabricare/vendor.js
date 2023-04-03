@@ -25,7 +25,7 @@ Shell.removeFile("archive/" + Project.vendor + ".7z");
 
 // Source
 runInPath("archive", function() {
-	webLink = "https://dlcdn.apache.org//apr/apr-util-1.6.1.tar.gz";
+	webLink = "https://dlcdn.apache.org//apr/apr-util-" + Project.version + ".tar.gz";
 	if (!Shell.fileExists(Project.vendor + ".tar.gz")) {
 		exitIf(Shell.system("curl --insecure --location " + webLink + " --output " + Project.vendor + ".tar.gz"));
 	};
