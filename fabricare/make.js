@@ -1,11 +1,13 @@
 // Created by Grigore Stefan <g_stefan@yahoo.com>
 // Public domain (Unlicense) <http://unlicense.org>
-// SPDX-FileCopyrightText: 2022-2023 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-FileCopyrightText: 2022-2024 Grigore Stefan <g_stefan@yahoo.com>
 // SPDX-License-Identifier: Unlicense
 
 Fabricare.include("vendor");
 
 messageAction("make");
+
+var aprVersion = "1.7.4";
 
 if (Shell.fileExists("temp/build.done.flag")) {
 	return;
@@ -30,13 +32,13 @@ if (Shell.directoryExists("../vendor-apr/output")) {
 } else {
 
 	Shell.mkdirRecursivelyIfNotExists("vendor");
-	var vendor = "apr-1.7.3-" + Platform.name + "-dev.7z";
+	var vendor = "apr-" + aprVersion + "-" + Platform.name + "-dev.7z";
 	if (Shell.fileExists(pathRelease + "/" + vendor)) {
 		Shell.copyFile(pathRelease + "/" + vendor, "vendor/" + vendor);
 	} else if (Shell.fileExists("../vendor-apr/release/" + vendor)) {
 		Shell.copyFile("../vendor-apr/release/" + vendor, "vendor/" + vendor);
 	} else {
-		var webLink = "https://github.com/g-stefan/vendor-apr/releases/download/v1.7.3/" + vendor;
+		var webLink = "https://github.com/g-stefan/vendor-apr/releases/download/v1.7.4/" + vendor;
 		exitIf(Shell.system("curl --insecure --location " + webLink +
 		                    " --output vendor/" + vendor));
 	};
