@@ -7,7 +7,7 @@ Fabricare.include("vendor");
 
 messageAction("make");
 
-var aprVersion = "1.7.5";
+var aprVersion = "1.7.6";
 
 if (Shell.fileExists("temp/build.done.flag")) {
 	return;
