@@ -1,0 +1,94 @@
+version = 1
+SPDX-PackageName = "vendor-apr-util"
+SPDX-PackageSupplier = "Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-PackageDownloadLocation = "https://github.com/g-stefan/vendor-apr-util"
+
+[[annotations]]
+path = ".github/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = ".github/CODE_OF_CONDUCT.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2014 Coraline Ada Ehmke <https://where.coraline.codes/>"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+[[annotations]]
+path = ".gitignore"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = ".vscode/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "mkdocs.yml"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "build/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "build.cmd"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "build.sh"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "README.md"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "output/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2000-2019 The Apache Software Foundation."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "source/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2000-2019 The Apache Software Foundation."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "archive/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2000-2019 The Apache Software Foundation."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "test/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "temp/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2000-2019 The Apache Software Foundation."
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "version.ini"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Grigore Stefan <g_stefan@yahoo.com>"
+SPDX-License-Identifier = "Unlicense"

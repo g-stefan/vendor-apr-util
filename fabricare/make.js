@@ -32,7 +32,7 @@ if (Shell.directoryExists("../vendor-apr/output")) {
 } else {
 
 	Shell.mkdirRecursivelyIfNotExists("vendor");
-	var vendor = "apr-" + aprVersion + "-" + Platform.name + "-dev.7z";
+	var vendor = "xyo.apr.v" + aprVersion + "." + Platform.name + ".dev.zip";
 	if (Shell.fileExists(pathRelease + "/" + vendor)) {
 		Shell.copyFile(pathRelease + "/" + vendor, "vendor/" + vendor);
 	} else if (Shell.fileExists("../vendor-apr/release/" + vendor)) {
@@ -47,7 +47,7 @@ if (Shell.directoryExists("../vendor-apr/output")) {
 //
 
 if (!Shell.fileExists("temp/build.config.flag")) {
-	Shell.copyFile("fabricare/CMakeLists.txt", "source/CMakeLists.txt");
+	Shell.copyFile("fabricare/source/CMakeLists.txt", "source/CMakeLists.txt");
 
 	Shell.setenv("CC", "cl.exe");
 	Shell.setenv("CXX", "cl.exe");
