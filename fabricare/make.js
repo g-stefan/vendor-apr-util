@@ -32,14 +32,14 @@ if (Shell.directoryExists("../vendor-apr/output")) {
 } else {
 
 	Shell.mkdirRecursivelyIfNotExists("vendor");
-	var vendor = "xyo.apr.v" + aprVersion + "." + Platform.name + ".dev.zip";
+	var vendor = "apr.v" + aprVersion + "." + Platform.name + ".dev.zip";
 	if (Shell.fileExists(pathRelease + "/" + vendor)) {
 		Shell.copyFile(pathRelease + "/" + vendor, "vendor/" + vendor);
 	} else if (Shell.fileExists("../vendor-apr/release/" + vendor)) {
 		Shell.copyFile("../vendor-apr/release/" + vendor, "vendor/" + vendor);
 	} else {
 		var webLink = "https://github.com/g-stefan/vendor-apr/releases/download/v1.7.4/" + vendor;
-		exitIf(Shell.system("curl --insecure --location " + webLink +
+		exitIf(Shell.system("curl --ca-native --location " + webLink +
 		                    " --output vendor/" + vendor));
 	};
 	exitIf(Shell.system("7z x -aoa -ooutput/ vendor/" + vendor));
